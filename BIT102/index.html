@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTraveller</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="video.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        
+</head>
+<body>
+
+    <!-- 🔹 Main Navigation Bar -->
+    <nav>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button> <!-- Hamburger Icon -->
+
+        <div class="logo-container">
+            <img src="Logo.png" alt="World Traveller Logo" class="logo">
+            <span class="brand-name">WorldTraveller</span>
+        </div>
+
+        <div class="nav-links"> 
+            <a href="#">Home</a>
+            <a href="#places">Places</a>
+            <a href="#reviews">Review</a>
+            <a href="#booking">Hotel</a>
+            <a href="#contact">Contact</a>
+
+            <span id="user-display" style="color:white; padding-right: 10px;"></span>
+            <a id="login-link" href="login.html" class="navbar-login">Login</a>
+            <a id="logout-link" href="#" onclick="logout()" class="navbar-button" style="display:none;">Logout</a>
+        </div>
+    </nav>
+
+    <!-- 🔹 Sidebar Menu for Mobile -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button> <!-- Close Button -->
+        <a href="#">Home</a>
+        <a href="#places">Places</a>
+        <a href="#reviews">Review</a>
+        <a href="#booking">Hotel</a>
+        <a href="#contact">Contact</a>
+        <a id="login-link-sidebar" href="login.html" class="navbar-login">Login</a>
+        <a id="logout-link-sidebar" href="#" onclick="logout()" class="navbar-button" style="display:none;">Logout</a>
+    </div>
+
+    <script>
+    function toggleMenu() {
+        let sidebar = document.getElementById('sidebar');
+        let overlay = document.getElementById('overlay');
+        let navLinks = document.querySelector('.nav-links');
+
+        sidebar.classList.toggle('active');
+        navLinks.style.display = sidebar.classList.contains('active') ? 'none' : 'flex';
+
+        if (sidebar.classList.contains('active')) {
+            overlay.classList.add('active'); // Show overlay
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        } else {
+            overlay.classList.remove('active'); // Hide overlay
+            document.body.style.overflow = ""; // Restore scrolling
+        }
+    }
+
+
+    // Ensure clicking overlay also closes menu
+    document.getElementById('overlay').addEventListener('click', function () {
+        toggleMenu();
+    });
+    </script>
+    <!-- 🔹 Overlay (For Clicking Outside the Menu) -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    
+    <div class="hero">
+        <video autoplay loop muted playsinline>
+            <source src="TravelPlace.mp4" type="video/mp4">
+        </video>
+    <div class="hero-content">
+    <h1>Explore the world,<br>Embrace the journey,<br>Discover yourself</h1>
+    </div>
+    </div>
+
+        <div id="places" class="places">
+            <h2 class="popular-destinations">Popular Destinations</h2>
+            <div class="grid-container">
+                <div class="box" onclick="location.href='paris.html';" style="background-image: url(Places_Photo/Paris.jpg);">
+                    <div class="overlaypd">Paris</div>
+                </div>
+                <div class="box" onclick="location.href='London.html';" style="background-image: url(Places_Photo/London.jpg);">
+                    <div class="overlaypd">London</div>
+                </div>
+                <div class="box" onclick="location.href='Rome.html';" style="background-image: url(Places_Photo/Rome.jpg);">
+                    <div class="overlaypd">Rome</div>
+                </div>
+                <div class="box" onclick="location.href='Beijing.html';" style="background-image: url(Places_Photo/Beijing.jpg);">
+                    <div class="overlaypd">Beijing</div>
+                </div>
+                <div class="box" onclick="location.href='tokyo.html';" style="background-image: url(Places_Photo/Tokyo.jpg);">
+                    <div class="overlaypd">Tokyo</div>
+                </div>
+                <div class="box" onclick="location.href='KualaLumpur.html';" style="background-image: url(Places_Photo/KualaLumpur.jpg);">
+                    <div class="overlaypd">Kuala Lumpur</div>
+                </div>
+        </div>
+    
+        <h2>Informative Tips for Traveling</h2>
+
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QCdRbg-BDAA" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-caption">Best Things to Do in Kuala Lumpur, Malaysia</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/00ZXaXIABMY" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-caption">Essential Tips for First - Time Travelers to Japan</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T4IQLitQMyw?si=LSAU0baYuI1Krt6i" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-caption">Know Before You Go: Beijing Travel Guide</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Lu7ozVw7ung?si=1W9er9Nqij1joZPX" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-caption">How to Visit London in 2025 – Complete Travel Guide</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GljTvdEDqJM?si=WqudZN071VaLo8eU" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-caption">Top 10 Things to Do in Paris – Ultimate France Travel Guide</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5DcA4BePBdA?si=I6kvYsluTQZOLwwm" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-caption">Must-See Attractions in Rome – Top 10 Travel Picks</div>
+                </div>
+            </div>
+    
+            <div class="carousel-controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+    
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const items = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+    
+            let index = 0;
+    
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+            }
+    
+            nextBtn.addEventListener('click', () => {
+                index = (index + 1) % items.length;
+                updateCarousel();
+            });
+    
+            prevBtn.addEventListener('click', () => {
+                index = (index - 1 + items.length) % items.length;
+                updateCarousel();
+            });
+        </script>
+
+    <div class="forum-container">
+        <h1>Join Our Community and Share Your Travel Experiences</h1>
+        <img src="community/travel_community.png" alt="Travel Community" class="banner">
+        <p>Share your travel stories, tips, and experiences with our community. Connect with fellow travelers, exchange insights, and explore new destinations together!</p>
+        <a href="Forum/forum.html" class="btn">Visit the Forum</a>
+    </div>
+
+    <div id="reviews-container"></div>
+    <div id="reviews" class="reviews"></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <section class="container">
+            <div class="section-header">
+                <h2>Review</h2>
+                <p><strong>See what our travelers have to say about their experiences with WorldTraveller!</strong></p>
+                <hr style="width: 50%; margin: 20px auto; border: 1px solid #ccc;">
+            </div>
+
+            <div class="testimonials">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img class="testimonial-img" src="Review/LunaJohn.jpeg" alt="Luna John">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="testimonial-text">"This website made my trip planning so much easier! I found detailed travel guides, hidden gems, and even recommendations from other travelers."</p>
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Luna John</p>
+                        <p class="testimonial-country">Australia</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img class="testimonial-img" src="Review/MarkSmith.webp" alt="Mark Smith">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="testimonial-text">"I love the community aspect of this site! The forum helped me connect with other travelers and get firsthand experiences."</p>
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Mark Smith</p>
+                        <p class="testimonial-country">Norway</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img class="testimonial-img" src="Review/Lisa.jpeg" alt="Lisa">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="testimonial-text">"This site has everything a traveler needs—destination insights and easy hotel bookings. Highly recommend!"</p>
+                    <div class="testimonial-info">
+                        <p class="testimonial-name">Lisa</p>
+                        <p class="testimonial-country">Egypt</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 50px;">
+                <h2><strong>Your Review is Important Too!</strong></h2>
+                <p style="font-size: 18px; margin-top: 10px;">We'd love to hear your feedback. Please leave a review below.</p>
+                <a href="ReviewForm.html" class="leave-review-btn" style="display: inline-block; background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 18px; margin-top: 15px;">Leave a Review</a>
+            </div>
+        </section>
+ 
+
+
+        <div id="booking" class="booking">
+            <section class="hotel-booking">
+                <h2>Book a Hotel with Us</h2>
+                <p>Find comfortable stays at the best prices.</p>
+                <a href="index_booking.html" class="book-now-btn">Book Now</a>
+            </section>
+        </div>
+
+        <div id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="contact-item">
+                <img src="EmailLogo.png" alt="Email Icon" class="contact-icon">
+                <p>Email: support@worldtraveller.com</p>
+            </div>
+            <div class="contact-item">
+                <img src="InstagramLogo.png" alt="Instagram Icon" class="contact-icon">
+                <p>Instagram: @worldtraveller</p>
+            </div>
+            <div class="contact-item">
+                <img src="PhoneLogo.png" alt="Phone Icon" class="contact-icon">
+                <p>Phone: +06 7847 5555</p>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; WorldTraveller 2024-2025 </p>
+    </footer>
+
+</body>
+</html>
+
+

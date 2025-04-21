@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beijing Travel Guide</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="beijing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">☰ MENU</button>
+        <div class="logo-container">
+            <img src="Logo.png" alt="World Traveller Logo" class="logo">
+            <span class="brand-name">WorldTraveller</span>
+        </div>
+        <a id="login-link" href="login.html" class="navbar-login">Login</a>
+    </nav>
+    
+    <!-- 🔹 Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <h3>Main Menu</h3>
+        <a href="index.html">Home</a>
+        <a href="Forum/forum.html">Forum</a>
+        <a href="index_booking.html">Booking</a>
+        <h3>Top Destinations</h3>
+        <a href="paris.html">Paris</a>
+        <a href="London.html">London</a>
+        <a href="Rome.html">Rome</a>
+        <a href="Beijing.html">Beijing</a>
+        <a href="Tokyo.html">Tokyo</a>
+        <a href="KualaLumpur.html">Kuala Lumpur</a>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <h1 class="text-center mb-4 fw-bold">Beijing Travel Guide</h1>
+        <p class="text-center text-muted">Beijing is the capital of China, rich in history, culture, and iconic landmarks.</p>
+
+        <!-- Must-Visit Landmarks -->
+        <h2 class="section-title mt-5">Must-Visit Landmarks</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/Forbidden_city.jpeg" alt="Forbidden City">
+                    <div class="card-body">
+                        <h5 class="fw-bold">The Forbidden City</h5>
+                        <p>A grand imperial palace of the Ming and Qing dynasties, offering a glimpse into China’s royal history.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/TiananmenSquare.jpg" alt="Tiananmen Square">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Tiananmen Square</h5>
+                        <p>One of the largest city squares in the world, famous for its historic significance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Famous Scenic Spots -->
+        <h2 class="section-title mt-5">Famous Scenic Spots</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/GreatWall.jpg" alt="Great Wall">
+                    <div class="card-body">
+                        <h5 class="fw-bold">The Badaling Great Wall</h5>
+                        <p>An outstanding section of the Great Wall with breathtaking views of the mountains.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/SummerPalace.jpg" alt="Summer Palace">
+                    <div class="card-body">
+                        <h5 class="fw-bold">The Summer Palace</h5>
+                        <p>A vast imperial garden featuring beautiful lakes, corridors, and ancient buildings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuisine and Local Delicacies -->
+        <h2 class="section-title mt-5">Cuisine and Local Delicacies</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/Roastduck.jpeg" alt="Beijing Roast Duck">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Beijing Roast Duck</h5>
+                        <p>A famous dish known for its crispy skin and tender meat, served with thin pancakes and sweet bean sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/Mutton.jpg" alt="Instant-Boiled Mutton">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Instant-Boiled Mutton</h5>
+                        <p>Thinly sliced lamb cooked in a hotpot, dipped in sesame sauce for a flavorful experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Culture and Festivals -->
+        <h2 class="section-title mt-5">Culture and Festivals</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/ChinaSpringFestival.webp" alt="Spring Festival">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Spring Festival</h5>
+                        <p>Beijing is bustling with traditional performances, delicious snacks, and vibrant celebrations during this festival.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Places_Photo/MidAutumn.jpeg" alt="Mid-Autumn Festival">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Mid-Autumn Festival</h5>
+                        <p>A time for family reunions and enjoying mooncakes under the full moon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

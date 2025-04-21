@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rome - The Eternal City</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../Logo.png">
+    <link rel="stylesheet" href="Rome.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">☰ MENU</button>
+        <div class="logo-container">
+            <img src="Logo.png" alt="World Traveller Logo" class="logo">
+            <span class="brand-name">WorldTraveller</span>
+        </div>
+        <a id="login-link" href="login.html" class="navbar-login">Login</a>
+    </nav>
+    
+    <!-- 🔹 Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <h3>Main Menu</h3>
+        <a href="index.html">Home</a>
+        <a href="Forum/forum.html">Forum</a>
+        <a href="index_booking.html">Booking</a>
+        <h3>Top Destinations</h3>
+        <a href="paris.html">Paris</a>
+        <a href="London.html">London</a>
+        <a href="Rome.html">Rome</a>
+        <a href="Beijing.html">Beijing</a>
+        <a href="Tokyo.html">Tokyo</a>
+        <a href="KualaLumpur.html">Kuala Lumpur</a>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Header Section -->
+    <div class="container text-center my-5">
+        <h1 class="fw-bold">Welcome to Rome</h1>
+        <p class="lead">The Eternal City of History, Art, and Culture</p>
+    </div>
+
+    <!-- Popular Attractions -->
+    <div class="container my-5" id="attractions">
+        <h2 class="section-title">Popular Attractions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Places_Photo/Colosseum.jpg" class="card-img-top" alt="Colosseum">
+                    <div class="card-body">
+                        <h5 class="card-title">The Colosseum</h5>
+                        <p class="card-text">A grand amphitheater that once hosted gladiatorial battles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Places_Photo/VaticanCity.jpeg" class="card-img-top" alt="Vatican City">
+                    <div class="card-body">
+                        <h5 class="card-title">Vatican City</h5>
+                        <p class="card-text">The spiritual and artistic heart of the world.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Places_Photo/pantheon.jpg" class="card-img-top" alt="Pantheon">
+                    <div class="card-body">
+                        <h5 class="card-title">The Pantheon</h5>
+                        <p class="card-text">A magnificent temple dedicated to all gods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Traditional Cuisine -->
+    <div class="container my-5" id="cuisine">
+        <h2 class="section-title">Traditional Roman Cuisine</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Places_Photo/CacioePepe.jpeg" class="card-img-top" alt="Cacio e Pepe">
+                    <div class="card-body">
+                        <h5 class="card-title">Cacio e Pepe</h5>
+                        <p class="card-text">A classic pasta with pecorino cheese and black pepper.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Places_Photo/Carbonara.jpeg" class="card-img-top" alt="Carbonara">
+                    <div class="card-body">
+                        <h5 class="card-title">Carbonara</h5>
+                        <p class="card-text">A creamy pasta dish with eggs, cheese, and guanciale.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Places_Photo/Amatriciana.avif" class="card-img-top" alt="Amatriciana">
+                    <div class="card-body">
+                        <h5 class="card-title">Amatriciana</h5>
+                        <p class="card-text">A tomato-based pasta sauce with guanciale and pecorino cheese.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Culture and Festivals -->
+    <div class="container my-5" id="culture">
+        <h2 class="section-title">Rome’s Culture and Festivals</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/RomeCulture.jpg" class="card-img-top" alt="Rome's Culture">
+                    <div class="card-body">
+                        <h5 class="card-title">A City of History and Art</h5>
+                        <p class="card-text">Rome’s ruins and monuments reflect its glorious past.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/FestivalOfRome.jpg" class="card-img-top" alt="Festivals of Rome">
+                    <div class="card-body">
+                        <h5 class="card-title">Major Festivals</h5>
+                        <p class="card-text">Experience Easter celebrations, religious feasts, and cultural events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 World Traveller | All rights reserved</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

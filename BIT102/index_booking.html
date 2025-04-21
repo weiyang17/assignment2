@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="style_booking.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html">
+                <img src="Forum/back-arrow.png" alt="Back Button" class="back-button">
+            </a>
+            <h2 class="title">Hotel Booking</h2>
+            <div class="spacer"></div> <!-- Balances layout -->
+        </div>    
+         <!-- Country Selection -->
+        <label for="country">Select Country:</label>
+        <select id="country">
+            <option value="" selected>Choose a country</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <option value="Rome">Rome</option>
+            <option value="Beijing">Beijing</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Kuala Lumpur">Kuala Lumpur</option>
+        </select>
+
+        <!-- Date Selection -->
+        <label for="date">Select Date:</label>
+        <input type="date" id="date">
+
+        <!-- Hotel Image -->
+        <div class="hotel-image-container">
+            <img id="hotel-image" src="hotel.jpg" alt="Hotel Image">
+        </div>
+
+        <!-- Room Type Selection -->
+        <label for="room-type">Select Room Type:</label>
+        <div class="room-selector">
+            <button id="prev-room">&#8592;</button>
+            <span id="room-type">Single Bed Room</span>
+            <button id="next-room">&#8594;</button>
+        </div>
+
+        <!-- Room Image -->
+        <div class="room-image-container">
+            <img id="room-image" src="images/default-room.jpg" alt="Room Image">
+        </div>
+
+        <!-- Room Price -->
+        <p>Price: <span id="room-price">$100</span></p>
+
+        <!-- Payment Options -->
+        <button id="payment-btn">Payment</button>
+        <div id="payment-options" class="hidden">
+            <h3>Accepted Payment Methods</h3>
+            <div class="payment-methods">
+                <img src="images_pay/Visa.png" alt="Visa" class="payment-logo">
+                <img src="images_pay/MasterCard.png" alt="MasterCard" class="payment-logo">
+                <img src="images_pay/PayPal.png" alt="PayPal" class="payment-logo">
+                <img src="images_pay/AliPay.png" alt="AliPay" class="payment-logo">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
