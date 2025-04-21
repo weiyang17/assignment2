@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="London.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">☰ MENU</button>
+        <div class="logo-container">
+            <img src="Logo.png" alt="World Traveller Logo" class="logo">
+            <span class="brand-name">WorldTraveller</span>
+        </div>
+        <a id="login-link" href="login.html" class="navbar-login">Login</a>
+    </nav>
+    
+    <!-- 🔹 Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <h3>Main Menu</h3>
+        <a href="index.html">Home</a>
+        <a href="Forum/forum.html">Forum</a>
+        <a href="index_booking.html">Booking</a>
+        <h3>Top Destinations</h3>
+        <a href="paris.html">Paris</a>
+        <a href="London.html">London</a>
+        <a href="Rome.html">Rome</a>
+        <a href="Beijing.html">Beijing</a>
+        <a href="Tokyo.html">Tokyo</a>
+        <a href="KualaLumpur.html">Kuala Lumpur</a>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Welcome to London</h1>
+        <p>The heart of England, blending history, royalty, and modern charm.</p>
+    </div>
+
+    <!-- Must-Visit Landmarks -->
+    <div class="container mt-4">
+        <h2 class="section-title">Must-Visit Landmarks</h2>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/BigBen.jpg" alt="Big Ben">
+                    <div class="card-body">
+                        <h5 class="card-title">Big Ben</h5>
+                        <p class="card-text">An iconic clock tower known for its historic significance and beautiful chimes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/Buckingham Place.jpeg" alt="Buckingham Palace">
+                    <div class="card-body">
+                        <h5 class="card-title">Buckingham Palace</h5>
+                        <p class="card-text">The official residence of the British monarch, famous for its grandeur and the Changing of the Guard ceremony.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Famous Scenic Spots -->
+    <div class="container mt-5">
+        <h2 class="section-title">Famous Scenic Spots</h2>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/TheLondonEyes.jpg" alt="London Eye">
+                    <div class="card-body">
+                        <h5 class="card-title">The London Eye</h5>
+                        <p class="card-text">A giant Ferris wheel offering breathtaking panoramic views of London.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/TheBrithishMuseum.jpeg" alt="British Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">The British Museum</h5>
+                        <p class="card-text">A world-famous museum housing artifacts from around the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- London Food -->
+    <div class="container mt-5">
+        <h2 class="section-title">Taste of London</h2>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/FishNChip.jpeg" alt="Fish and Chips">
+                    <div class="card-body">
+                        <h5 class="card-title">Fish and Chips</h5>
+                        <p class="card-text">A British classic, crispy battered fish with golden fries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/AfternoonTea.jpg" alt="Afternoon Tea">
+                    <div class="card-body">
+                        <h5 class="card-title">Afternoon Tea</h5>
+                        <p class="card-text">An elegant British tradition with tea, scones, and finger sandwiches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Culture and Festivals -->
+    <div class="container mt-5">
+        <h2 class="section-title">Culture and Festivals</h2>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/NottingHillCarnival.webp" alt="Notting Hill Carnival">
+                    <div class="card-body">
+                        <h5 class="card-title">Notting Hill Carnival</h5>
+                        <p class="card-text">Europe’s largest street festival, a celebration of Caribbean culture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Places_Photo/WestEndTheatre.webp" alt="West End Theatre">
+                    <div class="card-body">
+                        <h5 class="card-title">West End Theatre</h5>
+                        <p class="card-text">London’s Broadway, featuring world-class musicals and plays.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Time to Visit -->
+    <div class="container mt-5">
+        <h2 class="section-title">Best Time to Visit</h2>
+        <div class="card">
+            <img src="Places_Photo/LondonWeather.avif" class="card-img-top" alt="London Weather">
+            <div class="card-body">
+                <p class="card-text">Spring (March – May) and autumn (September – November) offer the best weather and fewer crowds.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 World Traveller. All rights reserved.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

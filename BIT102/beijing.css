@@ -1,0 +1,176 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 22px;
+    color: lightskyblue;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.navbar-login {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: -5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-login:hover {
+    background-color: #0056b3;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: left; 
+    display: block;
+    padding: 0;
+}
+.sidebar h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    text-align: left; /* Align text to the right */
+    padding-right: 10px; /* Add padding to the right */
+}
+.sidebar a:hover {
+    transform: scale(1.1);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+.back-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align back button to the left */
+    padding: 10px;
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust the top position */
+    left: 100px; /* Adjust the left position */
+}
+
+.container {
+    width: 90%; /* Limit the width of the container */
+    max-width: 1200px; /* Set a maximum width */
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+.row {
+    justify-content: center; /* Center the cards in the row */
+}
+
